@@ -17,7 +17,7 @@ app.use(json());
 app.use(
   cookieSession({
     signed: false, // disable encryption on cookies
-    secure: true, // only use cookies if users are visiting via https connection
+    secure: process.env.NODE_ENV !== 'test', // only use cookies if users are visiting via https connection
   })
 );
 

@@ -16,6 +16,8 @@ spec:
         - name: auth # useful for logging purposes
           image: smmai/auth
           env:
+            - name: MONGO_URI
+              value: 'mongodb://auth-mongo-srv:27017/auth'
             - name: JWT_KEY
               valueFrom:
                 secretKeyRef:

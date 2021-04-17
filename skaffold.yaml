@@ -25,7 +25,7 @@ build:
           - src: '**/*.js'
             dest: .
     - image: smmai/tickets
-      context: auth
+      context: tickets
       docker:
         dockerfile: Dockerfile
       sync:
